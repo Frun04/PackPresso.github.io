@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PackPresso</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap">
+    <style>
+        html, body {
+            background-image: url('fondo web negro.png');
+            background-size: cover;
+            background-repeat: repeat;
+            background-position: center;
+            color: #ffffff;
+            margin: 0;
+            padding: 20px;
+            overflow-x: hidden !important; /* Ensures horizontal overflow is hidden */
+            width: 100%;
+            box-sizing: border-box;
+        }
+        h1 {
+            font-size: 3em;
+            font-family: 'Shrikhand', cursive;
+            border: 5px solid #082748;
+            padding: 10px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        h2 {
+            text-align: center;
+            border: 2px solid #126ccd;
+            padding: 10px;
+            border-radius: 10px;
+            margin-top: 75px;
+        }
+        .layout-container, .integrantes-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .swiper-slide img {
+            display: block;
+            margin: 0 auto;
+        }
+        .layout-slide img {
+            max-width: 100%;
+            height: auto;
+        }
+        .integrantes-slide img {
+            width: 75px; /* Fixed width */
+            height: 75px; /* Fixed height */
+            object-fit: cover; /* Ensures images maintain their aspect ratio */
+        }
+        .integrantes-slide div {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .highlighted-text, .highlighted-text1 {
+            text-align: center;
+            border: 2px solid rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            margin-top: 25px;
+        }
+        .image-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .image-container div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .image-container img {
+            width: 75%;
+            height: auto;
+        }
+        .texto {
+            margin-top: 10px;
+        }
+        .full-width {
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .full-width p {
+            margin: 0 auto;
+            max-width: 800px;
+        }
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: #ffffff;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .swiper-button-next {
+            right: 10px;
+        }
+        .swiper-button-prev {
+            left: 10px;
+        }
+        @media only screen and (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+            .highlighted-text, .highlighted-text1 {
+                font-size: 0.9em;
+            }
+            .image-container {
+                grid-template-columns: 1fr;
+            }
+            .layout-slide img, .integrantes-slide img {
+                max-width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>PackPresso</h1>
+    <h2>Layout de la Estación:</h2>
+    <div class="swiper-container layout-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide layout-slide"><img src="Layout 1.jpeg" alt="Imagen del layout de la planta 1"></div>
+            <div class="swiper-slide layout-slide"><img src="Layout 2.jpeg" alt="Imagen del layout de la planta 2"></div>
+            <div class="swiper-slide layout-slide"><img src="Layout 3.jpeg" alt="Imagen del layout de la planta 3"></div>
+            <div class="swiper-slide layout-slide"><img src="Layout Cenital.jpeg" alt="Imagen del layout de la planta cenital"></div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+    <p class="highlighted-text">Este proyecto consiste en la automatización del empaquetado y transporte de cápsulas de café.
+        Esto se consigue mediante el uso de cintas transportadoras, robots delta y cobots.</p>
+    <h2>Robots Utilizados:</h2>
+    <div class="image-container">
+        <div>
+            <img src="Cobot ur10e.jpg" alt="Imagen del cobot ur10e">
+            <p class="highlighted-text">Un cobot capaz de manipular cargas de hasta 10 kg, suficiente
+                 para manipular las cajas llenas de cápsulas de café. El cobot las recibe
+                 a través de una cinta y las deposita en un paquete grande con un máximo 20 unidades.
+                 Se ha elegido este robot debido a el alcance que tiene, el cual permite llegar a recoger
+                 y depositar las cajas sin ningun inconveniente.</p>
+        </div>
+        <div>
+            <img src="Abb irb360.jpg" alt="Imagen del robot industrial abb irb360">
+            <p class="highlighted-text">Robot delta empleado en el empaquetado de las cápsulas de café,
+                 con una capacidad de carga máxima de 1 kg, será el encargado de coger las
+                  cápsulas de la cinta en movimiento y almacenarlas en paquetes de 10 unidades
+                  y dejar el paquete en la siguiente cinta del proceso. Se ha eledigo este robot dada su
+                 alta velocidad de coger objetos con una alta precisión. </p>
+        </div>
+    </div>
+    <h2>Objetivos de la automatización:</h2>
+    <div class="full-width">
+        <ul>
+            <li>Mejorar en un 20% la eficiencia de la tarea</li>
+            <li>Reducir costes en un 15%%</li>
+            <li>Disminuir la probabilidad de fallo hasta ser inferior a 1%</li>
+        </ul>
+        <p>Con este Proyecto cumplimos con las expectativas de mejora en eficiencia y eficacia de la empresa.
+        Conseguimos aumentar la producción, medida en la cantidad de cápsulas que salen al día de fábrica,
+        ya que los robots trabajan de manera continua, sin descansos y sin errores. Esto repercute de manera
+        positiva en el beneficio de la empresa, a la vez que reduce los costes de obtención del producto final.</p>
+    </div>
+    <h2>Integrantes del grupo B2:</h2>
+    <div class="swiper-container integrantes-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide integrantes-slide">
+                <img src="Fran.gif" alt="Imagen de Francesc">
+                <div>
+                    <p>Francesc Loeches: Coordinador</p> <!-- Name and role for Francesc -->
+                </div>
+            </div>
+            <div class="swiper-slide integrantes-slide">
+                <img src="Enric.gif" alt="Imagen de Enric">
+                <div>
+                    <p>Enric Hernández: Programador</p> <!-- Name and role for Enric -->
+                </div>
+            </div>
+            <div class="swiper-slide integrantes-slide">
+                <img src="Jaime.gif" alt="Imagen de Jaime">
+                <div>
+                    <p>Jaime Amorós: Programador</p> <!-- Name and role for Jaime -->
+                </div>
+            </div>
+            <div class="swiper-slide integrantes-slide">
+                <img src="Alex.jpeg" alt="Imagen de Alex">
+                <div>
+                    <p>Alejandro Gadea: Documentarista</p> <!-- Name and role for Alex -->
+                </div>
+            </div>
+            <div class="swiper-slide integrantes-slide">
+                <img src="Marcos.png" alt="Imagen de Sergio">
+                <div>
+                    <p>Marcos Sellés: Documentarista</p> <!-- Name and role for Marcos -->
+                </div>
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var layoutSwiper = new Swiper('.layout-container', {
+            slidesPerView: 1,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            loop: true,
+        });
+
+        var integrantesSwiper = new Swiper('.integrantes-container', {
+            slidesPerView: 1,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            loop: true,
+        });
+    </script>
+</body>
+</html>
